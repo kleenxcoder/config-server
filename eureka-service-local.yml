@@ -1,3 +1,25 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
+    com:
+      kleenxcoder: debug
+eureka:
+  server:
+    eviction-interval-timer-in-ms: '10000'
+  client:
+    fetchRegistry: 'false'
+    registerWithEureka: 'false'
 spring:
   application:
     name: eureka-service
+server:
+  port: '8761'
